@@ -6,13 +6,13 @@
 //
 //
 
-#import "TRViewController.h"
+#import "TRMainViewController.h"
 
-@interface TRViewController ()
+@interface TRMainViewController ()
 
 @end
 
-@implementation TRViewController
+@implementation TRMainViewController
 
 - (void)viewDidLoad
 {
