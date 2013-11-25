@@ -4,6 +4,8 @@
 //
 
 #import "TRFoodPhotosViewController.h"
+#import "TRRecipeDictonary.h"
+#import "TRFood.h"
 
 @interface TRFoodPhotosViewController ()
 
@@ -22,7 +24,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self loadImageFromUrl:[NSURL URLWithString:@"http://img.cpcdn.com/recipes/2200600/280/ee3ed9aa8d9ab49aec88248aaf20bd4e.jpg?u=5054658&p=1372906777"]];
+    TRRecipeDictonary *recipeDictionary = [[TRRecipeDictonary alloc] init];
+    NSArray *foods = [recipeDictionary recipesFor:@"卵" and:@"ご飯"];
+    if (foods) {
+        TRFood *food = [foods objectAtIndex:0];
+        [_foodName setText:[NSString stringWithFormat:@"%@", food.name]];
+        [food registerImageView:_foodImageView];
+    }
 }
 
 - (void)loadImageFromUrl:(NSURL*)url
