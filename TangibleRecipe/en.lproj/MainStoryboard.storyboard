@@ -133,6 +133,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="foodImageView" destination="DwE-RZ-GZi" id="pbU-Tb-OR1"/>
+                        <outlet property="foodName" destination="trt-Pm-t5p" id="pkl-Md-6kt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kG2-b8-sum" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -140,6 +141,22 @@
             <point key="canvasLocation" x="-3578" y="-495"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TRFoodPhotosViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TRFoodPhotosViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="transitToRecipes:"/>
+                <relationship kind="outlet" name="foodImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="foodName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TRMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TRMainViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
