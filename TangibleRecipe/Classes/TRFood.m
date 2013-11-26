@@ -8,13 +8,17 @@
 
 #import "TRFood.h"
 
-@implementation TRFood
+@interface TRFood() {
+@private
+    bool _isLoadingStarted;
+    NSString *_categoryId;
+    NSURL *_foodUrl;
+    NSData *_imageData;
+    UIImageView *_imageView;
+}
+@end
 
-bool _isLoadingStarted = FALSE;
-NSString *_categoryId;
-NSURL *_foodUrl;
-NSData *_imageData;
-UIImageView *_imageView;
+@implementation TRFood
 
 - (id)initWithName:(NSString*)name andId:(NSString *)categoryId
 {
