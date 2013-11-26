@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     TRRecipeDictonary *recipeDictionary = [[TRRecipeDictonary alloc] init];
-    NSArray *foods = [recipeDictionary recipesFor:@"卵" and:@"ご飯"];
+    NSArray *foods = [recipeDictionary recipesFor:@"たまご" and:@"ご飯"];
     if (foods) {
         TRFood *food = [foods objectAtIndex:0];
         [_foodName setText:[NSString stringWithFormat:@"%@", food.name]];
