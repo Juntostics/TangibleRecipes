@@ -7,23 +7,98 @@
 //
 
 #import "TRMainViewController.h"
+#import "TRDataManager.h"
 
 @interface TRMainViewController ()
+{
+    int width;
+    int height;
+}
+
+@property TBKDetectionView *detectionView;
+@property TBKBlockView *rightBlockView;
+@property TBKBlockView *leftBlockView;
+
 
 @end
+
+// 同時に表示するブロックの個数。
+// これを超えたら古い物から TBKBlockView インスタンスを使い回す。
+static const int NumberOfBlockDisplayAtATime = 7;
+
 
 @implementation TRMainViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self setScreenSize];
+    
+    //initialize for Tangiblock
+    [self getReadyForTangiblockDetection];
+    [self createBlockView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setScreenSize
+{
+    //self.view.frameで得られる縦横が反転しているので、正しいサイズを取得
+    width = [[UIScreen mainScreen]bounds].size.height;
+    height = [[UIScreen mainScreen]bounds].size.width;
+}
+
+#pragma mark Tangiblock
+- (void)getReadyForTangiblockDetection
+{
+    //initialize for Tangiblock
+    CGRect screenSize = CGRectMake(0, 0, width,height-150.0f);
+    self.detectionView = [[TBKDetectionView alloc] initWithFrame:screenSize delegate:self];
+    [self.view addSubview:self.detectionView];
+
+    [self becomeFirstResponder];
+
+}
+
+- (void)createBlockView
+{
+    CGSize blockSize = self.detectionView.recognizer.blockSize;
+    self.rightBlockView = [[TBKBlockView alloc] initWithFrame:CGRectMake(0, 0, blockSize.width, blockSize.height)];
+    self.rightBlockView.faceColor = [UIColor brownColor];
+    self.rightBlockView.hidden = YES;
+    [self.view insertSubview:self.rightBlockView belowSubview:self.detectionView];
+    
+    self.leftBlockView = [[TBKBlockView alloc] initWithFrame:CGRectMake(0, 0, blockSize.width, blockSize.height)];
+    self.leftBlockView.faceColor = [UIColor brownColor];
+    self.leftBlockView.hidden = YES;
+    [self.view insertSubview:self.leftBlockView belowSubview:self.detectionView];
+}
+
+- (void)showBlockStamp:(TBKBlock *)block view:(TBKBlockView *)blockView
+{
+    [blockView updateProperties:block];
+    blockView.hidden = NO;
+}
+
+
+
+#pragma mark TBKBlockRecognizerDelegate
+- (void)blocksBegan:(NSSet *)blocks withEvent:(UIEvent *)event
+{
+    for (TBKBlock *block in blocks) {
+        //画面の右と左で場合分け
+        if (block.center.x<=width/2.0f) {
+            [self showBlockStamp:block view:self.leftBlockView];
+        }else{
+            [self showBlockStamp:block view:self.rightBlockView];
+        }
+        NSLog(@"%d",block.kindCode);
+    }
 }
 
 @end

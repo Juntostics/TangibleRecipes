@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TangiblockKit/TangiblockKit.h>
 
-@interface TRMainViewController : UIViewController
+@interface TRMainViewController : UIViewController<TBKBlockRecognizerDelegate>
+
+
 
 @end

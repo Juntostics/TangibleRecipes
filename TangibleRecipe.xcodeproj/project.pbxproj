@@ -11,37 +11,31 @@
 		972FEC2118365BEF00818483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FEC2018365BEF00818483 /* Foundation.framework */; };
 		972FEC2318365BEF00818483 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FEC2218365BEF00818483 /* CoreGraphics.framework */; };
 		972FEC2918365BEF00818483 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972FEC2718365BEF00818483 /* InfoPlist.strings */; };
-		972FEC2B18365BEF00818483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FEC2A18365BEF00818483 /* main.m */; };
 		972FEC3818365BEF00818483 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972FEC3618365BEF00818483 /* MainStoryboard.storyboard */; };
 		972FEC4318365BEF00818483 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FEC4218365BEF00818483 /* SenTestingKit.framework */; };
 		972FEC4418365BEF00818483 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FEC1E18365BEF00818483 /* UIKit.framework */; };
 		972FEC4518365BEF00818483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972FEC2018365BEF00818483 /* Foundation.framework */; };
-		972FEC4D18365BEF00818483 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972FEC4B18365BEF00818483 /* InfoPlist.strings */; };
 		972FEC5018365BEF00818483 /* TangibleRecipeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FEC4F18365BEF00818483 /* TangibleRecipeTests.m */; };
 		972FED0318367ED900818483 /* RecipesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972FED0218367ED800818483 /* RecipesStoryboard.storyboard */; };
-		972FED14183685CF00818483 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0B183685CE00818483 /* TRAppDelegate.m */; };
-		972FED15183685CF00818483 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0D183685CE00818483 /* TRFoodPhotosViewController.m */; };
-		972FED16183685CF00818483 /* TRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0F183685CF00818483 /* TRMainViewController.m */; };
-		972FED17183685CF00818483 /* TRRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED11183685CF00818483 /* TRRecipeDetailViewController.m */; };
-		972FED18183685CF00818483 /* TRRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED13183685CF00818483 /* TRRecipeListViewController.m */; };
 		972FED1C1836867500818483 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED191836867500818483 /* Default-568h@2x.png */; };
 		972FED1D1836867500818483 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1A1836867500818483 /* Default.png */; };
 		972FED1E1836867500818483 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1B1836867500818483 /* Default@2x.png */; };
-		972FED21184346D200818483 /* TRRecipeDictonary.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED20184346D200818483 /* TRRecipeDictonary.m */; };
-		972FED2A1843483500818483 /* TRFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED291843483500818483 /* TRFood.m */; };
-		972FED2B184353CB00818483 /* TRAppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0A183685CE00818483 /* TRAppDelegate.h */; };
-		972FED2C184353CB00818483 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0B183685CE00818483 /* TRAppDelegate.m */; };
-		972FED2D184353CB00818483 /* TRFoodPhotosViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0C183685CE00818483 /* TRFoodPhotosViewController.h */; };
-		972FED2E184353CB00818483 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0D183685CE00818483 /* TRFoodPhotosViewController.m */; };
-		972FED2F184353CB00818483 /* TRMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0E183685CF00818483 /* TRMainViewController.h */; };
-		972FED30184353CB00818483 /* TRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED0F183685CF00818483 /* TRMainViewController.m */; };
-		972FED31184353CB00818483 /* TRRecipeDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED10183685CF00818483 /* TRRecipeDetailViewController.h */; };
-		972FED32184353CB00818483 /* TRRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED11183685CF00818483 /* TRRecipeDetailViewController.m */; };
-		972FED33184353CB00818483 /* TRRecipeListViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED12183685CF00818483 /* TRRecipeListViewController.h */; };
-		972FED34184353CB00818483 /* TRRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FED13183685CF00818483 /* TRRecipeListViewController.m */; };
-		972FED35184353CB00818483 /* TRRecipeDictonary.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED1F184346D200818483 /* TRRecipeDictonary.h */; };
-		972FED36184353CB00818483 /* TRFood.h in Sources */ = {isa = PBXBuildFile; fileRef = 972FED281843483500818483 /* TRFood.h */; };
-		972FED3A18437F8100818483 /* api_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 972FED3918437F8100818483 /* api_config.plist */; };
+		D68270AD184593730067AE52 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */; };
+		D68270AE184593730067AE52 /* TRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270AA184593730067AE52 /* TRMainViewController.m */; };
+		D68270AF184593730067AE52 /* TRRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270AC184593730067AE52 /* TRRecipeDetailViewController.m */; };
+		D68270B2184593860067AE52 /* TRRecipeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270B1184593860067AE52 /* TRRecipeListViewController.m */; };
+		D68270B4184594A20067AE52 /* api_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D68270B3184594A20067AE52 /* api_config.plist */; };
+		D68270BD184595D10067AE52 /* TRFood.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270BB184595D10067AE52 /* TRFood.m */; };
+		D68270C0184596AD0067AE52 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270BF184596AD0067AE52 /* TRAppDelegate.m */; };
+		D68270C2184597130067AE52 /* TRRecipeDictonary.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270C1184597130067AE52 /* TRRecipeDictonary.m */; };
+		D68270C3184598880067AE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 972FEC2A18365BEF00818483 /* main.m */; };
+		D6AEC1EC1842732000FB509E /* TangiblockKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEC1EB1842732000FB509E /* TangiblockKit.framework */; };
+		D6AEC1EE1842735800FB509E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AEC1ED1842735800FB509E /* libc++.dylib */; };
+		D6AEC1F41842747400FB509E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972FEC4B18365BEF00818483 /* InfoPlist.strings */; };
+		D6AEC1F81842976800FB509E /* TRDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AEC1F71842976800FB509E /* TRDataManager.m */; };
+		D6AEC1FE1842B2AE00FB509E /* TRCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AEC1FD1842B2AE00FB509E /* TRCustomCollectionViewCell.m */; };
+		D6AEC2001842B2DA00FB509E /* TRCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AEC1FF1842B2DA00FB509E /* TRCustomCollectionViewCell.xib */; };
+		D6AEC2021843321700FB509E /* junto.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AEC2011843321700FB509E /* junto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,25 +64,34 @@
 		972FEC4C18365BEF00818483 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		972FEC4E18365BEF00818483 /* TangibleRecipeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TangibleRecipeTests.h; sourceTree = "<group>"; };
 		972FEC4F18365BEF00818483 /* TangibleRecipeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TangibleRecipeTests.m; sourceTree = "<group>"; };
-		972FED0218367ED800818483 /* RecipesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecipesStoryboard.storyboard; sourceTree = "<group>"; };
-		972FED0A183685CE00818483 /* TRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRAppDelegate.h; path = Classes/TRAppDelegate.h; sourceTree = "<group>"; };
-		972FED0B183685CE00818483 /* TRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRAppDelegate.m; path = Classes/TRAppDelegate.m; sourceTree = "<group>"; };
-		972FED0C183685CE00818483 /* TRFoodPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFoodPhotosViewController.h; path = Classes/TRFoodPhotosViewController.h; sourceTree = "<group>"; };
-		972FED0D183685CE00818483 /* TRFoodPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRFoodPhotosViewController.m; path = Classes/TRFoodPhotosViewController.m; sourceTree = "<group>"; };
-		972FED0E183685CF00818483 /* TRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRMainViewController.h; path = Classes/TRMainViewController.h; sourceTree = "<group>"; };
-		972FED0F183685CF00818483 /* TRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRMainViewController.m; path = Classes/TRMainViewController.m; sourceTree = "<group>"; };
-		972FED10183685CF00818483 /* TRRecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeDetailViewController.h; path = Classes/TRRecipeDetailViewController.h; sourceTree = "<group>"; };
-		972FED11183685CF00818483 /* TRRecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeDetailViewController.m; path = Classes/TRRecipeDetailViewController.m; sourceTree = "<group>"; };
-		972FED12183685CF00818483 /* TRRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeListViewController.h; path = Classes/TRRecipeListViewController.h; sourceTree = "<group>"; };
-		972FED13183685CF00818483 /* TRRecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeListViewController.m; path = Classes/TRRecipeListViewController.m; sourceTree = "<group>"; };
+		972FED0218367ED800818483 /* RecipesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RecipesStoryboard.storyboard; path = TangibleRecipe/RecipesStoryboard.storyboard; sourceTree = "<group>"; };
 		972FED191836867500818483 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/splash/Default-568h@2x.png"; sourceTree = "<group>"; };
 		972FED1A1836867500818483 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
 		972FED1B1836867500818483 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
-		972FED1F184346D200818483 /* TRRecipeDictonary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeDictonary.h; path = Classes/TRRecipeDictonary.h; sourceTree = "<group>"; };
-		972FED20184346D200818483 /* TRRecipeDictonary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeDictonary.m; path = Classes/TRRecipeDictonary.m; sourceTree = "<group>"; };
-		972FED281843483500818483 /* TRFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFood.h; path = Classes/TRFood.h; sourceTree = "<group>"; };
-		972FED291843483500818483 /* TRFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRFood.m; path = Classes/TRFood.m; sourceTree = "<group>"; };
-		972FED3918437F8100818483 /* api_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_config.plist; sourceTree = "<group>"; };
+		D68270A7184593730067AE52 /* TRFoodPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFoodPhotosViewController.h; path = TangibleRecipe/Classes/TRFoodPhotosViewController.h; sourceTree = "<group>"; };
+		D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRFoodPhotosViewController.m; path = TangibleRecipe/Classes/TRFoodPhotosViewController.m; sourceTree = "<group>"; };
+		D68270A9184593730067AE52 /* TRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRMainViewController.h; path = TangibleRecipe/Classes/TRMainViewController.h; sourceTree = "<group>"; };
+		D68270AA184593730067AE52 /* TRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRMainViewController.m; path = TangibleRecipe/Classes/TRMainViewController.m; sourceTree = "<group>"; };
+		D68270AB184593730067AE52 /* TRRecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeDetailViewController.h; path = TangibleRecipe/Classes/TRRecipeDetailViewController.h; sourceTree = "<group>"; };
+		D68270AC184593730067AE52 /* TRRecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeDetailViewController.m; path = TangibleRecipe/Classes/TRRecipeDetailViewController.m; sourceTree = "<group>"; };
+		D68270B0184593860067AE52 /* TRRecipeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeListViewController.h; path = TangibleRecipe/Classes/TRRecipeListViewController.h; sourceTree = "<group>"; };
+		D68270B1184593860067AE52 /* TRRecipeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeListViewController.m; path = TangibleRecipe/Classes/TRRecipeListViewController.m; sourceTree = "<group>"; };
+		D68270B3184594A20067AE52 /* api_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_config.plist; sourceTree = "<group>"; };
+		D68270B5184595770067AE52 /* TRRecipeDictonary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecipeDictonary.h; path = TangibleRecipe/Classes/TRRecipeDictonary.h; sourceTree = "<group>"; };
+		D68270B8184595D10067AE52 /* TRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRAppDelegate.h; path = TangibleRecipe/Classes/TRAppDelegate.h; sourceTree = "<group>"; };
+		D68270BA184595D10067AE52 /* TRFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFood.h; path = TangibleRecipe/Classes/TRFood.h; sourceTree = "<group>"; };
+		D68270BB184595D10067AE52 /* TRFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRFood.m; path = TangibleRecipe/Classes/TRFood.m; sourceTree = "<group>"; };
+		D68270BF184596AD0067AE52 /* TRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRAppDelegate.m; path = TangibleRecipe/Classes/TRAppDelegate.m; sourceTree = "<group>"; };
+		D68270C1184597130067AE52 /* TRRecipeDictonary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRRecipeDictonary.m; path = TangibleRecipe/Classes/TRRecipeDictonary.m; sourceTree = "<group>"; };
+		D6AEC1EB1842732000FB509E /* TangiblockKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TangiblockKit.framework; sourceTree = "<group>"; };
+		D6AEC1ED1842735800FB509E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D6AEC1F61842976800FB509E /* TRDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDataManager.h; sourceTree = "<group>"; };
+		D6AEC1F71842976800FB509E /* TRDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDataManager.m; sourceTree = "<group>"; };
+		D6AEC1F918429FF800FB509E /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		D6AEC1FC1842B2AE00FB509E /* TRCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		D6AEC1FD1842B2AE00FB509E /* TRCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		D6AEC1FF1842B2DA00FB509E /* TRCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRCustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6AEC2011843321700FB509E /* junto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = junto.png; path = ../junto.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AEC1EE1842735800FB509E /* libc++.dylib in Frameworks */,
 				972FEC1F18365BEF00818483 /* UIKit.framework in Frameworks */,
+				D6AEC1EC1842732000FB509E /* TangiblockKit.framework in Frameworks */,
 				972FEC2118365BEF00818483 /* Foundation.framework in Frameworks */,
 				972FEC2318365BEF00818483 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -137,6 +142,8 @@
 		972FEC1D18365BEF00818483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6AEC1ED1842735800FB509E /* libc++.dylib */,
+				D6AEC1EB1842732000FB509E /* TangiblockKit.framework */,
 				972FEC1E18365BEF00818483 /* UIKit.framework */,
 				972FEC2018365BEF00818483 /* Foundation.framework */,
 				972FEC2218365BEF00818483 /* CoreGraphics.framework */,
@@ -148,24 +155,11 @@
 		972FEC2418365BEF00818483 /* TangibleRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				972FEC3618365BEF00818483 /* MainStoryboard.storyboard */,
-				972FED0218367ED800818483 /* RecipesStoryboard.storyboard */,
+				D6AEC2311844EC9E00FB509E /* Imgs */,
+				D6AEC22F1844EC2C00FB509E /* Utils */,
+				D6AEC2301844EC4400FB509E /* Views&Controllers */,
 				972FEC2518365BEF00818483 /* Supporting Files */,
-				972FED0A183685CE00818483 /* TRAppDelegate.h */,
-				972FED0B183685CE00818483 /* TRAppDelegate.m */,
-				972FED0C183685CE00818483 /* TRFoodPhotosViewController.h */,
-				972FED0D183685CE00818483 /* TRFoodPhotosViewController.m */,
-				972FED0E183685CF00818483 /* TRMainViewController.h */,
-				972FED0F183685CF00818483 /* TRMainViewController.m */,
-				972FED10183685CF00818483 /* TRRecipeDetailViewController.h */,
-				972FED11183685CF00818483 /* TRRecipeDetailViewController.m */,
-				972FED12183685CF00818483 /* TRRecipeListViewController.h */,
-				972FED13183685CF00818483 /* TRRecipeListViewController.m */,
-				972FED1F184346D200818483 /* TRRecipeDictonary.h */,
-				972FED20184346D200818483 /* TRRecipeDictonary.m */,
-				972FED281843483500818483 /* TRFood.h */,
-				972FED291843483500818483 /* TRFood.m */,
-				972FED3918437F8100818483 /* api_config.plist */,
+				D68270B3184594A20067AE52 /* api_config.plist */,
 			);
 			path = TangibleRecipe;
 			sourceTree = "<group>";
@@ -201,6 +195,52 @@
 				972FEC4B18365BEF00818483 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6AEC22F1844EC2C00FB509E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D68270BF184596AD0067AE52 /* TRAppDelegate.m */,
+				D68270B8184595D10067AE52 /* TRAppDelegate.h */,
+				D68270BA184595D10067AE52 /* TRFood.h */,
+				D68270BB184595D10067AE52 /* TRFood.m */,
+				D68270C1184597130067AE52 /* TRRecipeDictonary.m */,
+				D68270B5184595770067AE52 /* TRRecipeDictonary.h */,
+				D6AEC1F918429FF800FB509E /* Const.h */,
+				D6AEC1F61842976800FB509E /* TRDataManager.h */,
+				D6AEC1F71842976800FB509E /* TRDataManager.m */,
+			);
+			name = Utils;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6AEC2301844EC4400FB509E /* Views&Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEC1FF1842B2DA00FB509E /* TRCustomCollectionViewCell.xib */,
+				D6AEC1FC1842B2AE00FB509E /* TRCustomCollectionViewCell.h */,
+				D6AEC1FD1842B2AE00FB509E /* TRCustomCollectionViewCell.m */,
+				972FEC3618365BEF00818483 /* MainStoryboard.storyboard */,
+				972FED0218367ED800818483 /* RecipesStoryboard.storyboard */,
+				D68270B0184593860067AE52 /* TRRecipeListViewController.h */,
+				D68270B1184593860067AE52 /* TRRecipeListViewController.m */,
+				D68270A7184593730067AE52 /* TRFoodPhotosViewController.h */,
+				D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */,
+				D68270A9184593730067AE52 /* TRMainViewController.h */,
+				D68270AA184593730067AE52 /* TRMainViewController.m */,
+				D68270AB184593730067AE52 /* TRRecipeDetailViewController.h */,
+				D68270AC184593730067AE52 /* TRRecipeDetailViewController.m */,
+			);
+			name = "Views&Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6AEC2311844EC9E00FB509E /* Imgs */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEC2011843321700FB509E /* junto.png */,
+			);
+			name = Imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,13 +314,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68270B4184594A20067AE52 /* api_config.plist in Resources */,
 				972FEC2918365BEF00818483 /* InfoPlist.strings in Resources */,
+				D6AEC1F41842747400FB509E /* InfoPlist.strings in Resources */,
 				972FEC3818365BEF00818483 /* MainStoryboard.storyboard in Resources */,
 				972FED0318367ED900818483 /* RecipesStoryboard.storyboard in Resources */,
 				972FED1C1836867500818483 /* Default-568h@2x.png in Resources */,
 				972FED1D1836867500818483 /* Default.png in Resources */,
+				D6AEC2021843321700FB509E /* junto.png in Resources */,
 				972FED1E1836867500818483 /* Default@2x.png in Resources */,
-				972FED3A18437F8100818483 /* api_config.plist in Resources */,
+				D6AEC2001842B2DA00FB509E /* TRCustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972FEC4D18365BEF00818483 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,21 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972FED2B184353CB00818483 /* TRAppDelegate.h in Sources */,
-				972FED2C184353CB00818483 /* TRAppDelegate.m in Sources */,
-				972FED2D184353CB00818483 /* TRFoodPhotosViewController.h in Sources */,
-				972FED2E184353CB00818483 /* TRFoodPhotosViewController.m in Sources */,
-				972FED2F184353CB00818483 /* TRMainViewController.h in Sources */,
-				972FED30184353CB00818483 /* TRMainViewController.m in Sources */,
-				972FED31184353CB00818483 /* TRRecipeDetailViewController.h in Sources */,
-				972FED32184353CB00818483 /* TRRecipeDetailViewController.m in Sources */,
-				972FED33184353CB00818483 /* TRRecipeListViewController.h in Sources */,
-				972FED34184353CB00818483 /* TRRecipeListViewController.m in Sources */,
-				972FED35184353CB00818483 /* TRRecipeDictonary.h in Sources */,
-				972FED36184353CB00818483 /* TRFood.h in Sources */,
-				972FEC2B18365BEF00818483 /* main.m in Sources */,
-				972FED21184346D200818483 /* TRRecipeDictonary.m in Sources */,
-				972FED2A1843483500818483 /* TRFood.m in Sources */,
+				D68270C3184598880067AE52 /* main.m in Sources */,
+				D68270AF184593730067AE52 /* TRRecipeDetailViewController.m in Sources */,
+				D68270BD184595D10067AE52 /* TRFood.m in Sources */,
+				D68270C0184596AD0067AE52 /* TRAppDelegate.m in Sources */,
+				D68270AD184593730067AE52 /* TRFoodPhotosViewController.m in Sources */,
+				D68270AE184593730067AE52 /* TRMainViewController.m in Sources */,
+				D68270C2184597130067AE52 /* TRRecipeDictonary.m in Sources */,
+				D6AEC1F81842976800FB509E /* TRDataManager.m in Sources */,
+				D68270B2184593860067AE52 /* TRRecipeListViewController.m in Sources */,
+				D6AEC1FE1842B2AE00FB509E /* TRCustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				972FEC5018365BEF00818483 /* TangibleRecipeTests.m in Sources */,
-				972FED14183685CF00818483 /* TRAppDelegate.m in Sources */,
-				972FED15183685CF00818483 /* TRFoodPhotosViewController.m in Sources */,
-				972FED16183685CF00818483 /* TRMainViewController.m in Sources */,
-				972FED17183685CF00818483 /* TRRecipeDetailViewController.m in Sources */,
-				972FED18183685CF00818483 /* TRRecipeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +403,7 @@
 				972FEC3718365BEF00818483 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = TangibleRecipe;
 			sourceTree = "<group>";
 		};
 		972FEC4B18365BEF00818483 /* InfoPlist.strings */ = {
@@ -439,6 +472,10 @@
 		972FEC5418365BEF00818483 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Junto/Documents/TangibleRecipes,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TangibleRecipe/TangibleRecipe-Prefix.pch";
 				INFOPLIST_FILE = "TangibleRecipe/TangibleRecipe-Info.plist";
@@ -450,6 +487,10 @@
 		972FEC5518365BEF00818483 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Junto/Documents/TangibleRecipes,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TangibleRecipe/TangibleRecipe-Prefix.pch";
 				INFOPLIST_FILE = "TangibleRecipe/TangibleRecipe-Info.plist";
@@ -511,6 +552,7 @@
 				972FEC5518365BEF00818483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		972FEC5618365BEF00818483 /* Build configuration list for PBXNativeTarget "TangibleRecipeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +561,7 @@
 				972FEC5818365BEF00818483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
