@@ -20,6 +20,8 @@
 		972FED1C1836867500818483 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED191836867500818483 /* Default-568h@2x.png */; };
 		972FED1D1836867500818483 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1A1836867500818483 /* Default.png */; };
 		972FED1E1836867500818483 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1B1836867500818483 /* Default@2x.png */; };
+		D61ADCE11846E2FE00CB4C33 /* foodMenuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */; };
+		D61ADCE21846E2FE00CB4C33 /* MainViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */; };
 		D68270AD184593730067AE52 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */; };
 		D68270AE184593730067AE52 /* TRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270AA184593730067AE52 /* TRMainViewController.m */; };
 		D68270AF184593730067AE52 /* TRRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270AC184593730067AE52 /* TRRecipeDetailViewController.m */; };
@@ -68,6 +70,8 @@
 		972FED191836867500818483 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/splash/Default-568h@2x.png"; sourceTree = "<group>"; };
 		972FED1A1836867500818483 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
 		972FED1B1836867500818483 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
+		D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodMenuBG.png; sourceTree = "<group>"; };
+		D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainViewBG.png; sourceTree = "<group>"; };
 		D68270A7184593730067AE52 /* TRFoodPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFoodPhotosViewController.h; path = TangibleRecipe/Classes/TRFoodPhotosViewController.h; sourceTree = "<group>"; };
 		D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRFoodPhotosViewController.m; path = TangibleRecipe/Classes/TRFoodPhotosViewController.m; sourceTree = "<group>"; };
 		D68270A9184593730067AE52 /* TRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRMainViewController.h; path = TangibleRecipe/Classes/TRMainViewController.h; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 		D6AEC2311844EC9E00FB509E /* Imgs */ = {
 			isa = PBXGroup;
 			children = (
+				D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */,
+				D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */,
 				D6AEC2011843321700FB509E /* junto.png */,
 			);
 			name = Imgs;
@@ -320,9 +326,11 @@
 				972FEC3818365BEF00818483 /* MainStoryboard.storyboard in Resources */,
 				972FED0318367ED900818483 /* RecipesStoryboard.storyboard in Resources */,
 				972FED1C1836867500818483 /* Default-568h@2x.png in Resources */,
+				D61ADCE21846E2FE00CB4C33 /* MainViewBG.png in Resources */,
 				972FED1D1836867500818483 /* Default.png in Resources */,
 				D6AEC2021843321700FB509E /* junto.png in Resources */,
 				972FED1E1836867500818483 /* Default@2x.png in Resources */,
+				D61ADCE11846E2FE00CB4C33 /* foodMenuBG.png in Resources */,
 				D6AEC2001842B2DA00FB509E /* TRCustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

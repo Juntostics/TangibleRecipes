@@ -34,6 +34,7 @@ static const int NumberOfBlockDisplayAtATime = 7;
     [super viewDidLoad];
     
     [self setScreenSize];
+    [self setBGImageToWindow];
     
     //initialize for Tangiblock
     [self getReadyForTangiblockDetection];
@@ -51,6 +52,19 @@ static const int NumberOfBlockDisplayAtATime = 7;
     //self.view.frameで得られる縦横が反転しているので、正しいサイズを取得
     width = [[UIScreen mainScreen]bounds].size.height;
     height = [[UIScreen mainScreen]bounds].size.width;
+}
+
+- (void)setBGImageToWindow
+{
+    UIImage *img_before = [UIImage imageNamed:@"MainViewBG.png"];  // リサイズ前UIImage
+    UIImage *img_after;  // リサイズ後UIImage
+
+    UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    [img_before drawInRect:CGRectMake(0, 0, width, height)];
+    img_after = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:img_after];
 }
 
 #pragma mark Tangiblock

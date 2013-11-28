@@ -9,6 +9,10 @@
 #import "TRCustomCollectionViewCell.h"
 
 @interface TRFoodPhotosViewController ()
+{
+    int width;
+    int height;
+}
 
 @end
 
@@ -32,10 +36,31 @@
         [_foodName setText:[NSString stringWithFormat:@"%@", food.name]];
         [food registerImageView:_foodImageView];
     }
-//	[self loadImageFromUrl:[NSURL URLWithString:@"http://img.cpcdn.com/recipes/2200600/280/ee3ed9aa8d9ab49aec88248aaf20bd4e.jpg?u=5054658&p=1372906777"]];
-    NSLog(@"INIT");
+
     [self initializeForCollectionView];
+    [self setScreenSize];
+    [self setBGImageToWindow];
 }
+- (void)setScreenSize
+{
+    //self.view.frameで得られる縦横が反転しているので、正しいサイズを取得
+    width = [[UIScreen mainScreen]bounds].size.height;
+    height = [[UIScreen mainScreen]bounds].size.width;
+}
+
+- (void)setBGImageToWindow
+{
+    UIImage *img_before = [UIImage imageNamed:@"foodMenuBG.png"];  // リサイズ前UIImage
+    UIImage *img_after;  // リサイズ後UIImage
+    
+    UIGraphicsBeginImageContext(CGSizeMake(width, height));
+    [img_before drawInRect:CGRectMake(0, 0, width, height)];
+    img_after = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:img_after];
+}
+
 
 - (void)loadImageFromUrl:(NSURL*)url
 {
