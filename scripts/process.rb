@@ -57,14 +57,28 @@ end
 normalizeData()
 foods = readData()
 
+load("put_description.rb")
 threathold = 3
 ingredient2food = {}
 ing_pair_to_food = {}
 food2ingredient = {}
+food2description = {}
 target_ingredients = ["とり肉", "ぶた肉", "ベーコン", "にんじん", "ご飯", "たまご", "牛乳", "玉ねぎ", "にんにく", "トマト"]
+ng_foods = ["ケークサレ（塩ケーキ）", "ビリヤニ"]
+known_foods = ['コロッケ', 'カレー', 'チャーハン', 'パスタ', 'グラタン', 'スープ'];
+fallback_for_description = {
+  "鶏丼" => "とりにくをご飯(ごはん)の上(うえ)にのせて，甘い(あまい)たれをかけた料理(りょうり)",
+  "トマトクリーム" => "トマトと牛乳(ぎゅうにゅう)をまぜたソース",
+  "パスタソース" => "パスタにからめて味(あじ)をつけるソース",
+  "プリン" => "小麦粉(こむぎこ)、米(べい)、ラード、肉(にく)、卵(たまご)、牛乳(ぎゅうにゅう)、バター、果物(くだもの)などの材料(ざいりょう)を混ぜ(まぜ)て、砂糖(さとう)、塩(しお)などの調味料(ちょうみりょう)や香辛料(こうしんりょう)で味付け(あじつけ)し、煮(に)たり蒸し(むし)たり焼い(やい)たりして固め(かため)た料理(りょうり)",
+  "スンドゥブチゲ" => "スンドゥブ・チゲは食堂(しょくどう)や家庭(かてい)で一般的(いっぱんてき)かつ安価(あんか)に親しま(したしま)れている鍋料理(なべりょうり)のひとつである。"
+}
 
 foods.each do |food|
   ingredients = []
+  if food[:name].include?("アレンジ") or ng_foods.include?(food[:name])
+    next
+  end
   food[:ingredients].each do |key, val|
     if val >= threathold and target_ingredients.include?(key) then
       ingredients << key
@@ -85,6 +99,25 @@ foods.each do |food|
       end
     end
     food2ingredient[food[:name]] = ingredients
+    simple_name = food[:name].split("・")[0].split("（")[0]
+    description = nil
+    known_foods.each do |food_name|
+      if simple_name.end_with?(food_name) then
+        description = simple_name.gsub(food_name, "") + "の#{food_name}。" + put_furigana(fetch_description(simple_name))
+        break
+      end
+    end
+    unless description then
+      description = put_furigana(fetch_description(simple_name))
+    end
+    if description.empty? then
+      if fallback_for_description.has_key?(simple_name) then
+        description = fallback_for_description[simple_name]
+      else
+        p "No description found for #{simple_name}"
+      end
+    end
+    food2description[food[:name]] = description
   end
 end
 
@@ -95,17 +128,9 @@ ingredient2food.each do |item|
   arr << item[0]
 end
 
-p arr
-p arr.size
-
-arr2 = []
-p food2ingredient.keys
-
 ingredient2food.each do |item|
   item[0]
 end
-
-
 
 def loadCategoryList
   data = nil
@@ -123,6 +148,7 @@ def getFullId(categoryList, name)
   end
 end
 
+# generate objC formatted output
 out = []
 ing_pair_to_food.each do |key, val|
   new_key = nil;
@@ -134,7 +160,7 @@ ing_pair_to_food.each do |key, val|
   constructors = []
   categoryList = loadCategoryList
   val.each do |name|
-    constructors << "[[TRFood alloc] initWithName:@\"#{name}\" andId:@\"#{getFullId(categoryList, name)}\"]"
+    constructors << "[[TRFood alloc] initWithName:@\"#{name}\" id:@\"#{getFullId(categoryList, name)}\" andDescription:@\"#{food2description[name]}\"]"
   end 
   out << "@\"#{new_key}\" : @[#{constructors.join(', ')}]"
 end
