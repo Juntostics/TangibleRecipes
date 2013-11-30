@@ -20,10 +20,11 @@
 
 @implementation TRFood
 
-- (id)initWithName:(NSString*)name andId:(NSString *)categoryId
+- (id)initWithName:(NSString*)name id:(NSString *)categoryId andDescription:(NSString *)description
 {
     _name = name;
     _categoryId = categoryId;
+    _description = description;
     NSURL *baseCategoryURL = [NSURL URLWithString:@"http://recipe.rakuten.co.jp/category/"];
     _recipeListUrl = [NSURL URLWithString:categoryId relativeToURL:baseCategoryURL];
     return self;
