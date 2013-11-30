@@ -484,6 +484,11 @@
 					"$(inherited)",
 					/Users/Junto/Documents/TangibleRecipes,
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/Users/Junto/Documents/TangibleRecipes,
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TangibleRecipe/TangibleRecipe-Prefix.pch";
 				INFOPLIST_FILE = "TangibleRecipe/TangibleRecipe-Info.plist";
