@@ -7,7 +7,10 @@
 //
 
 #import "TRMainViewController.h"
+#import "TRFoodPhotosViewController.h"
+#import "TRRecipeDictonary.h"
 #import "TRDataManager.h"
+
 
 @interface TRMainViewController ()
 {
@@ -30,6 +33,7 @@ static const int NumberOfBlockDisplayAtATime = 7;
 @implementation TRMainViewController
 
 @synthesize debugLabel;
+NSMutableArray *ingredients;
 
 - (void)viewDidLoad
 {
@@ -41,6 +45,20 @@ static const int NumberOfBlockDisplayAtATime = 7;
     //initialize for Tangiblock
     [self getReadyForTangiblockDetection];
     [self createBlockView];
+    
+    ingredients = [[NSMutableArray alloc] init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self resetState];
+}
+
+- (void)resetState
+{
+    [ingredients removeAllObjects];
+    debugLabel.text = @"";
+    self.startCookButton.enabled = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +76,47 @@ static const int NumberOfBlockDisplayAtATime = 7;
 
 - (IBAction)debugFoodButtonPressed:(id)sender
 {
-    debugLabel.text = ((UIButton *)sender).currentTitle;
+    NSString *ingredient = ((UIButton *)sender).currentTitle;
+    [self handleIngredient:ingredient];
+}
+
+// @return ingredientがaddされたかどうか
+- (BOOL)handleIngredient:(NSString *)ingredient
+{
+    if ([ingredients containsObject:ingredient] || [ingredients count] == 2) {
+        return false;
+    }
+    
+    [ingredients addObject:ingredient];
+    // TODO: play sound
+    
+    // TODO: remove below debugging-related sentences
+    debugLabel.text = [NSString stringWithFormat:@"選択されている食材: %@ ",[ingredients objectAtIndex:0]];
+    
+    if ([ingredients count] == 2) {
+        debugLabel.text = [debugLabel.text stringByAppendingString:ingredient];
+        self.startCookButton.enabled = true;
+    }
+    return true;
+}
+
+- (IBAction)onCookButtonPressed:(id)sender
+{
+    self.startCookButton.enabled = false;
+    
+    // TODO: play firing sound
+    TRRecipeDictonary *recipeDictionary = [[TRRecipeDictonary alloc] init];
+    NSArray *foodList = [recipeDictionary recipesFor:[ingredients objectAtIndex:0] and:[ingredients objectAtIndex:1]];
+    NSLog(@"%@ %@ %@", [ingredients objectAtIndex:0], [ingredients objectAtIndex:1], foodList);
+    BOOL shouldGoNextView = [foodList count] != 0;
+    
+    // TODO: wait until sound effect ends
+    if (shouldGoNextView) {
+        [self.navigationController pushViewController:[[TRFoodPhotosViewController alloc] init] animated:YES];
+    } else {
+        // TODO: play NG SE
+        [self resetState];
+    }
 }
 
 - (void)setBGImageToWindow

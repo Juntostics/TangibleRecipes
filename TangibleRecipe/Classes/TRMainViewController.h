@@ -12,7 +12,8 @@
 @interface TRMainViewController : UIViewController<TBKBlockRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *debugLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startCookButton;
 
 - (IBAction)debugFoodButtonPressed:(id)sender;
-
+- (IBAction)onCookButtonPressed:(id)sender;
 @end

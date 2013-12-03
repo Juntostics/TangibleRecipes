@@ -20,6 +20,7 @@
 		972FED1C1836867500818483 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED191836867500818483 /* Default-568h@2x.png */; };
 		972FED1D1836867500818483 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1A1836867500818483 /* Default.png */; };
 		972FED1E1836867500818483 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1B1836867500818483 /* Default@2x.png */; };
+		9741F1B1184D85A9009D4BED /* fire_tmp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9741F1B0184D85A9009D4BED /* fire_tmp.wav */; };
 		D61ADCE11846E2FE00CB4C33 /* foodMenuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */; };
 		D61ADCE21846E2FE00CB4C33 /* MainViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */; };
 		D68270AD184593730067AE52 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */; };
@@ -70,6 +71,7 @@
 		972FED191836867500818483 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/splash/Default-568h@2x.png"; sourceTree = "<group>"; };
 		972FED1A1836867500818483 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
 		972FED1B1836867500818483 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
+		9741F1B0184D85A9009D4BED /* fire_tmp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fire_tmp.wav; path = sounds/fire_tmp.wav; sourceTree = SOURCE_ROOT; };
 		D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodMenuBG.png; sourceTree = "<group>"; };
 		D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainViewBG.png; sourceTree = "<group>"; };
 		D68270A7184593730067AE52 /* TRFoodPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFoodPhotosViewController.h; path = TangibleRecipe/Classes/TRFoodPhotosViewController.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		972FEC2418365BEF00818483 /* TangibleRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				9741F1AE184D856B009D4BED /* Resources */,
 				D6AEC2311844EC9E00FB509E /* Imgs */,
 				D6AEC22F1844EC2C00FB509E /* Utils */,
 				D6AEC2301844EC4400FB509E /* Views&Controllers */,
@@ -199,6 +202,22 @@
 				972FEC4B18365BEF00818483 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9741F1AE184D856B009D4BED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9741F1AF184D8575009D4BED /* Sound */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9741F1AF184D8575009D4BED /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9741F1B0184D85A9009D4BED /* fire_tmp.wav */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 		D6AEC22F1844EC2C00FB509E /* Utils */ = {
@@ -320,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9741F1B1184D85A9009D4BED /* fire_tmp.wav in Resources */,
 				D68270B4184594A20067AE52 /* api_config.plist in Resources */,
 				972FEC2918365BEF00818483 /* InfoPlist.strings in Resources */,
 				D6AEC1F41842747400FB509E /* InfoPlist.strings in Resources */,
