@@ -6,6 +6,7 @@
 #import "TRFoodPhotosViewController.h"
 #import "TRRecipeDictonary.h"
 #import "TRFood.h"
+#import "TRDataManager.h"
 #import "TRCustomCollectionViewCell.h"
 
 @interface TRFoodPhotosViewController ()
@@ -29,14 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    TRRecipeDictonary *recipeDictionary = [[TRRecipeDictonary alloc] init];
-    NSArray *foods = [recipeDictionary recipesFor:@"たまご" and:@"ご飯"];
-    if (foods) {
-        TRFood *food = [foods objectAtIndex:0];
-        [_foodName setText:[NSString stringWithFormat:@"%@", food.name]];
-        [food registerImageView:_foodImageView];
-    }
-
     [self initializeForCollectionView];
     [self setScreenSize];
     [self setBGImageToWindow];
@@ -83,12 +76,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 7;
+    return [[TRDataManager shareManager].foodData count] ;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     TRCustomCollectionViewCell *cell = [_foodCollectionView dequeueReusableCellWithReuseIdentifier:@"CellId" forIndexPath:indexPath];
+    TRFood *foodAtIndex = (TRFood *)[[TRDataManager shareManager].foodData objectAtIndex:indexPath.row];
+    [cell setFood:foodAtIndex];
     return cell;
 }
 

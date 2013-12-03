@@ -42,7 +42,7 @@ static TRDataManager *sharedInstance = nil;
 }
 
 
-- (NSDictionary*)getFoodData
+- (NSArray*)getFoodData
 {
     return self.foodData;
 }

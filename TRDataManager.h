@@ -10,8 +10,7 @@
 
 @interface TRDataManager : NSObject
 
-@property NSDictionary *foodData;
-
+@property NSArray *foodData;
 
 + (TRDataManager*)shareManager;
 

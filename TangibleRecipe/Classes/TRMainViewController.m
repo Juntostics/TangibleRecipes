@@ -9,6 +9,7 @@
 #import <AudioToolbox/AudioServices.h>
 #import "TRMainViewController.h"
 #import "TRFoodPhotosViewController.h"
+#import "TRFood.h"
 #import "TRRecipeDictonary.h"
 #import "TRDataManager.h"
 
@@ -123,6 +124,13 @@ SystemSoundID fireSound, okSound, ngSound;
     NSLog(@"%@ %@ %@", [ingredients objectAtIndex:0], [ingredients objectAtIndex:1], foodList);
     BOOL shouldGoNextView = [foodList count] != 0;
     
+    if (shouldGoNextView) {
+        [[TRDataManager shareManager] setFoodData:foodList];
+        int prefetchLimit = 3;
+        for (int i = 0; i < [foodList count] && i < prefetchLimit; i++) {
+            [(TRFood *)[foodList objectAtIndex:i] startDataLoading];
+        }
+    }
     [self performSelector:@selector(feedbackResult:) withObject:[NSNumber numberWithBool:shouldGoNextView] afterDelay:2.0f];
 
 }

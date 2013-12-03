@@ -37,13 +37,12 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+
+-(id)setFood:(TRFood *)food
 {
-    // Drawing code
+    _foodNameLabel.text = food.name;
+    [food registerImageView:_foodImageView];
+    return self;
 }
-*/
 
 @end
