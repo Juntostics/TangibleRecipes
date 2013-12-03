@@ -95,6 +95,7 @@ TRFood *foodInSelection;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     foodInSelection = [[TRDataManager shareManager].foodData objectAtIndex:indexPath.row];
+    _foodDescription.text = foodInSelection.description;
 }
 
 
