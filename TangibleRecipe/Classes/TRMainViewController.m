@@ -128,11 +128,10 @@ SystemSoundID fireSound, okSound, ngSound;
         [[TRDataManager shareManager] setFoodData:foodList];
         int prefetchLimit = 3;
         for (int i = 0; i < [foodList count] && i < prefetchLimit; i++) {
-            [(TRFood *)[foodList objectAtIndex:i] startDataLoading];
+            [[foodList objectAtIndex:i] performSelector:@selector(startDataLoading) withObject:nil afterDelay:1.2f * i];
         }
     }
     [self performSelector:@selector(feedbackResult:) withObject:[NSNumber numberWithBool:shouldGoNextView] afterDelay:2.0f];
-
 }
 
 - (void)feedbackResult:(NSNumber *)shouldTransit
