@@ -131,7 +131,8 @@ SystemSoundID fireSound, okSound, ngSound;
 {
     if([shouldTransit boolValue]) {
         AudioServicesPlaySystemSound(okSound);
-        [self.navigationController pushViewController:[[TRFoodPhotosViewController alloc] init] animated:YES];
+        UIViewController *foodPhotoViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"FoodPhotoView"];
+        [self.navigationController pushViewController:foodPhotoViewController animated:YES];
     } else {
         AudioServicesPlaySystemSound(ngSound);
         [self resetState];

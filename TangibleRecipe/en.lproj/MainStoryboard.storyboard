@@ -114,7 +114,7 @@
         <!--Food Photos View Controller-->
         <scene sceneID="9ic-eA-0VN">
             <objects>
-                <viewController id="oVd-Ob-E43" customClass="TRFoodPhotosViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodPhotoView" id="oVd-Ob-E43" customClass="TRFoodPhotosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B2b-kj-9JE"/>
                         <viewControllerLayoutGuide type="bottom" id="vbU-EG-xlF"/>
