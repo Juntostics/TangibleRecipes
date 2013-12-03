@@ -8,6 +8,7 @@
 #import "TRFood.h"
 #import "TRDataManager.h"
 #import "TRCustomCollectionViewCell.h"
+#import "TRRakutenRecipeViewController.h"
 
 @interface TRFoodPhotosViewController ()
 {
@@ -19,17 +20,19 @@
 
 @implementation TRFoodPhotosViewController
 
+TRFood *foodInSelection;
+
 - (IBAction)transitToRecipes:(id)sender
 {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"RecipesStoryboard" bundle:nil];
-    window.rootViewController = [storyBoard instantiateViewControllerWithIdentifier:@"RecipesViewController"];
+    TRRakutenRecipeViewController *rakutenRecipeViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"RakutenRecipeView"];
+    [rakutenRecipeViewController setURL:foodInSelection.recipeListUrl];
+    [self.navigationController pushViewController:rakutenRecipeViewController animated:YES];
 }
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    foodInSelection = [[TRDataManager shareManager].foodData objectAtIndex:0];
     [self initializeForCollectionView];
     [self setScreenSize];
     [self setBGImageToWindow];
@@ -91,15 +94,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    STCollectionItem *item = [_items objectAtIndex:indexPath.row];
-//    NSString *message = [NSString stringWithFormat:@"%d\n%@", item.number, item.caption];
-//    
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-//                                                        message:message
-//                                                       delegate:nil
-//                                              cancelButtonTitle:nil
-//                                              otherButtonTitles:@"OK", nil];
-//    [alertView show];
+    foodInSelection = [[TRDataManager shareManager].foodData objectAtIndex:indexPath.row];
 }
 
 
