@@ -29,6 +29,8 @@ static const int NumberOfBlockDisplayAtATime = 7;
 
 @implementation TRMainViewController
 
+@synthesize debugLabel;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,6 +54,11 @@ static const int NumberOfBlockDisplayAtATime = 7;
     //self.view.frameで得られる縦横が反転しているので、正しいサイズを取得
     width = [[UIScreen mainScreen]bounds].size.height;
     height = [[UIScreen mainScreen]bounds].size.width;
+}
+
+- (IBAction)debugFoodButtonPressed:(id)sender
+{
+    debugLabel.text = ((UIButton *)sender).currentTitle;
 }
 
 - (void)setBGImageToWindow
