@@ -21,6 +21,9 @@
 		972FED1D1836867500818483 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1A1836867500818483 /* Default.png */; };
 		972FED1E1836867500818483 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 972FED1B1836867500818483 /* Default@2x.png */; };
 		9741F1B1184D85A9009D4BED /* fire_tmp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9741F1B0184D85A9009D4BED /* fire_tmp.wav */; };
+		9741F1B4184D8AF7009D4BED /* beep_tmp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9741F1B2184D8AF7009D4BED /* beep_tmp.mp3 */; };
+		9741F1B5184D8AF7009D4BED /* positive_feedback_tmp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9741F1B3184D8AF7009D4BED /* positive_feedback_tmp.mp3 */; };
+		9741F1B7184D8B20009D4BED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9741F1B6184D8B20009D4BED /* AudioToolbox.framework */; };
 		D61ADCE11846E2FE00CB4C33 /* foodMenuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */; };
 		D61ADCE21846E2FE00CB4C33 /* MainViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */; };
 		D68270AD184593730067AE52 /* TRFoodPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68270A8184593730067AE52 /* TRFoodPhotosViewController.m */; };
@@ -72,6 +75,9 @@
 		972FED1A1836867500818483 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
 		972FED1B1836867500818483 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		9741F1B0184D85A9009D4BED /* fire_tmp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = fire_tmp.wav; path = sounds/fire_tmp.wav; sourceTree = SOURCE_ROOT; };
+		9741F1B2184D8AF7009D4BED /* beep_tmp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep_tmp.mp3; path = sounds/beep_tmp.mp3; sourceTree = SOURCE_ROOT; };
+		9741F1B3184D8AF7009D4BED /* positive_feedback_tmp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = positive_feedback_tmp.mp3; path = sounds/positive_feedback_tmp.mp3; sourceTree = SOURCE_ROOT; };
+		9741F1B6184D8B20009D4BED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D61ADCDF1846E2FE00CB4C33 /* foodMenuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodMenuBG.png; sourceTree = "<group>"; };
 		D61ADCE01846E2FE00CB4C33 /* MainViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainViewBG.png; sourceTree = "<group>"; };
 		D68270A7184593730067AE52 /* TRFoodPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRFoodPhotosViewController.h; path = TangibleRecipe/Classes/TRFoodPhotosViewController.h; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9741F1B7184D8B20009D4BED /* AudioToolbox.framework in Frameworks */,
 				D6AEC1EE1842735800FB509E /* libc++.dylib in Frameworks */,
 				972FEC1F18365BEF00818483 /* UIKit.framework in Frameworks */,
 				D6AEC1EC1842732000FB509E /* TangiblockKit.framework in Frameworks */,
@@ -148,6 +155,7 @@
 		972FEC1D18365BEF00818483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9741F1B6184D8B20009D4BED /* AudioToolbox.framework */,
 				D6AEC1ED1842735800FB509E /* libc++.dylib */,
 				D6AEC1EB1842732000FB509E /* TangiblockKit.framework */,
 				972FEC1E18365BEF00818483 /* UIKit.framework */,
@@ -215,6 +223,8 @@
 		9741F1AF184D8575009D4BED /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				9741F1B2184D8AF7009D4BED /* beep_tmp.mp3 */,
+				9741F1B3184D8AF7009D4BED /* positive_feedback_tmp.mp3 */,
 				9741F1B0184D85A9009D4BED /* fire_tmp.wav */,
 			);
 			name = Sound;
@@ -344,11 +354,13 @@
 				972FEC2918365BEF00818483 /* InfoPlist.strings in Resources */,
 				D6AEC1F41842747400FB509E /* InfoPlist.strings in Resources */,
 				972FEC3818365BEF00818483 /* MainStoryboard.storyboard in Resources */,
+				9741F1B5184D8AF7009D4BED /* positive_feedback_tmp.mp3 in Resources */,
 				972FED0318367ED900818483 /* RecipesStoryboard.storyboard in Resources */,
 				972FED1C1836867500818483 /* Default-568h@2x.png in Resources */,
 				D61ADCE21846E2FE00CB4C33 /* MainViewBG.png in Resources */,
 				972FED1D1836867500818483 /* Default.png in Resources */,
 				D6AEC2021843321700FB509E /* junto.png in Resources */,
+				9741F1B4184D8AF7009D4BED /* beep_tmp.mp3 in Resources */,
 				972FED1E1836867500818483 /* Default@2x.png in Resources */,
 				D61ADCE11846E2FE00CB4C33 /* foodMenuBG.png in Resources */,
 				D6AEC2001842B2DA00FB509E /* TRCustomCollectionViewCell.xib in Resources */,

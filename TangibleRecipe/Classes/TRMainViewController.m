@@ -6,6 +6,7 @@
 //
 //
 
+#import <AudioToolbox/AudioServices.h>
 #import "TRMainViewController.h"
 #import "TRFoodPhotosViewController.h"
 #import "TRRecipeDictonary.h"
@@ -34,6 +35,7 @@ static const int NumberOfBlockDisplayAtATime = 7;
 
 @synthesize debugLabel;
 NSMutableArray *ingredients;
+SystemSoundID fireSound, okSound, ngSound;
 
 - (void)viewDidLoad
 {
@@ -47,11 +49,22 @@ NSMutableArray *ingredients;
     [self createBlockView];
     
     ingredients = [[NSMutableArray alloc] init];
+    [self initSoundResources];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self resetState];
+}
+
+- (void)initSoundResources
+{
+    NSString *fireSoundPath = [[NSBundle mainBundle] pathForResource:@"fire_tmp" ofType:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:fireSoundPath], &fireSound);
+    NSString *okSoundPath = [[NSBundle mainBundle] pathForResource:@"positive_feedback_tmp" ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:okSoundPath], &okSound);
+    NSString *ngSoundPath = [[NSBundle mainBundle] pathForResource:@"beep_tmp" ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:ngSoundPath], &ngSound);
 }
 
 - (void)resetState
@@ -104,17 +117,23 @@ NSMutableArray *ingredients;
 {
     self.startCookButton.enabled = false;
     
-    // TODO: play firing sound
+    AudioServicesPlaySystemSound(fireSound);
     TRRecipeDictonary *recipeDictionary = [[TRRecipeDictonary alloc] init];
     NSArray *foodList = [recipeDictionary recipesFor:[ingredients objectAtIndex:0] and:[ingredients objectAtIndex:1]];
     NSLog(@"%@ %@ %@", [ingredients objectAtIndex:0], [ingredients objectAtIndex:1], foodList);
     BOOL shouldGoNextView = [foodList count] != 0;
     
-    // TODO: wait until sound effect ends
-    if (shouldGoNextView) {
+    [self performSelector:@selector(feedbackResult:) withObject:[NSNumber numberWithBool:shouldGoNextView] afterDelay:2.0f];
+
+}
+
+- (void)feedbackResult:(NSNumber *)shouldTransit
+{
+    if([shouldTransit boolValue]) {
+        AudioServicesPlaySystemSound(okSound);
         [self.navigationController pushViewController:[[TRFoodPhotosViewController alloc] init] animated:YES];
     } else {
-        // TODO: play NG SE
+        AudioServicesPlaySystemSound(ngSound);
         [self resetState];
     }
 }
