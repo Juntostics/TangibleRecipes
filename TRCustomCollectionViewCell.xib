@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="469" height="466"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="junto.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-2s-Dko">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loading.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-2s-Dko">
                         <rect key="frame" x="0.0" y="68" width="469" height="398"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.84802973800000003" blue="0.65246945349999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,6 +38,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="junto.png" width="155" height="185"/>
+        <image name="loading.png" width="259" height="194"/>
     </resources>
 </document>
