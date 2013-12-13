@@ -43,33 +43,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-8H-QOw">
-                                <rect key="frame" x="61" y="597" width="84" height="35"/>
+                                <rect key="frame" x="61" y="645" width="84" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="にんじん" backgroundImage="Default.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="debugFoodButtonPressed:" destination="3" eventType="touchUpInside" id="kPk-95-gCS"/>
+                                    <action selector="debugFoodButtonPressed:" destination="2" eventType="touchUpInside" id="tRX-Ab-1vy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlS-Pl-6yM">
-                                <rect key="frame" x="61" y="651" width="84" height="31"/>
+                                <rect key="frame" x="60" y="688" width="84" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="トマト" backgroundImage="Default.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="debug2:" destination="2" eventType="touchUpInside" id="PdL-UD-l9H"/>
+                                    <action selector="debugFoodButtonPressed:" destination="2" eventType="touchUpInside" id="JlX-U9-Vsi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyZ-aa-oou">
-                                <rect key="frame" x="59" y="700" width="86" height="30"/>
+                                <rect key="frame" x="59" y="727" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="牛乳" backgroundImage="Default.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="debugFoodButtonPressed:" destination="3" eventType="touchUpInside" id="ubs-48-jDk"/>
+                                    <action selector="debugFoodButtonPressed:" destination="2" eventType="touchUpInside" id="nsT-Eg-PTl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選択されている食材" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tft-cb-g9o">
@@ -133,7 +133,9 @@
                         <outlet property="centerCookwareImage" destination="O4b-B9-VRd" id="8NL-lN-f1G"/>
                         <outlet property="debugLabel" destination="tft-cb-g9o" id="iLx-8N-k6D"/>
                         <outlet property="fireAnimeView" destination="7dv-if-eRj" id="BTe-2t-XjY"/>
+                        <outlet property="leftBlockHolder" destination="aug-RV-gLC" id="mgc-wb-saZ"/>
                         <outlet property="leftCookwareImage" destination="qVn-4U-jUs" id="yqu-4e-cqx"/>
+                        <outlet property="rightBlockHolder" destination="eST-4R-v5n" id="d1Z-FU-e97"/>
                         <outlet property="rightCookwareImage" destination="pcn-Il-qqq" id="sLm-FE-reu"/>
                         <outlet property="startCookButton" destination="wt6-rI-ygD" id="6JY-IH-3Wf"/>
                     </connections>

@@ -26,11 +26,14 @@
     IBOutlet UIButton *leftChangeCookwareBtn;
     IBOutlet UIImageView *fireAnimeView;
     
+    IBOutlet UIImageView *rightBlockHolder;
+    IBOutlet UIImageView *leftBlockHolder;
+    
     NSArray *cookwares;
     NSArray *ingredientImages;
     int cookwareNum;
     
-    NSMutableArray *rightBlockNumArray;
+NSMutableArray *rightBlockNumArray;
     NSMutableArray *leftBlockNumArray;
     
 }
@@ -231,44 +234,6 @@ enum{
     height = [[UIScreen mainScreen]bounds].size.width;
 }
 
-- (IBAction)debugFoodButtonPressed:(id)sender
-{
-    NSString *ingredient = ((UIButton *)sender).currentTitle;
-    [self handleIngredient:ingredient];
-    [rightBlockNumArray addObject:((UIButton *)sender).currentTitle];
-}
-- (IBAction)debug2:(id)sender
-{
-    [leftBlockNumArray addObject:((UIButton *)sender).currentTitle];
-    
-    NSString *ingredient = ((UIButton *)sender).currentTitle;
-    [self handleIngredient:ingredient];
-}
-
--(void)handleFoodNumber
-{
-    
-}
-
-// @return ingredientがaddされたかどうか
-- (BOOL)handleIngredient:(NSString *)ingredient
-{
-    if ([ingredients containsObject:ingredient] || [ingredients count] == 2) {
-        return false;
-    }
-    
-    [ingredients addObject:ingredient];
-    // TODO: play sound
-    
-    // TODO: remove below debugging-related sentences
-    debugLabel.text = [NSString stringWithFormat:@"選択されている食材: %@ ",[ingredients objectAtIndex:0]];
-    
-    if ([ingredients count] == 2) {
-        debugLabel.text = [debugLabel.text stringByAppendingString:ingredient];
-        self.startCookButton.enabled = true;
-    }
-    return true;
-}
 
 - (IBAction)onCookButtonPressed:(id)sender
 {
@@ -456,5 +421,71 @@ enum{
         NSLog(@"%d",block.kindCode);
     }
 }
+
+#pragma mark-DEBUG-
+
+- (IBAction)debugFoodButtonPressed:(id)sender
+{
+    NSString *ingredient = ((UIButton *)sender).currentTitle;
+    int foodNum = nil;
+    if ([ingredient isEqualToString:@"牛乳"]) {
+        foodNum = Milk;
+        AudioServicesPlaySystemSound(milkSound);
+    }else if ([ingredient isEqualToString:@"にんじん"]){
+        foodNum = Carrot;
+        AudioServicesPlaySystemSound(carotSound);
+    }else if([ingredient isEqualToString:@"トマト"]){
+        foodNum = Tomato;
+        AudioServicesPlaySystemSound(tomatoSound);
+    }
+    
+    
+    if ([rightBlockNumArray count]<[leftBlockNumArray count]) {
+        self.rightTanTanImageView.hidden = NO;
+        self.rightTanTanImageView.center = rightBlockHolder.center;
+        self.rightTanTanImageView.image = [ingredientImages objectAtIndex:foodNum];
+        
+        [rightBlockNumArray addObject:ingredient];
+        DATAMANAGER.rightImage = [ingredientImages objectAtIndex:foodNum];
+    }else{
+        self.leftTanTanImageView.hidden = NO;
+        self.leftTanTanImageView.center = leftBlockHolder.center;
+        self.leftTanTanImageView.image = [ingredientImages objectAtIndex:foodNum];
+        
+        [leftBlockNumArray addObject:ingredient];
+        DATAMANAGER.leftImage = [ingredientImages objectAtIndex:foodNum];
+    }
+    
+    if([leftBlockNumArray count]>0&&[rightBlockNumArray count]>0){
+        if ([((NSString *)[leftBlockNumArray lastObject]) isEqualToString:((NSString * )[rightBlockNumArray lastObject])]) {
+            self.startCookButton.enabled=false;
+            return;
+        }
+        self.startCookButton.enabled = true;
+    }
+}
+
+
+
+
+//// @return ingredientがaddされたかどうか
+//- (BOOL)handleIngredient:(NSString *)ingredient
+//{
+//    if ([ingredients containsObject:ingredient] || [ingredients count] == 2) {
+//        return false;
+//    }
+//    
+//    [ingredients addObject:ingredient];
+//    // TODO: play sound
+//    
+//    // TODO: remove below debugging-related sentences
+//    debugLabel.text = [NSString stringWithFormat:@"選択されている食材: %@ ",[ingredients objectAtIndex:0]];
+//    
+//    if ([ingredients count] == 2) {
+//        debugLabel.text = [debugLabel.text stringByAppendingString:ingredient];
+//        self.startCookButton.enabled = true;
+//    }
+//    return true;
+//}
 
 @end
