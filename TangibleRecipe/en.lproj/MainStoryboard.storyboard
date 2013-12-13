@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="3F4-Kf-jxM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="3F4-Kf-jxM">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -33,22 +33,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="タイトルとかがこの辺りに" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwS-pz-hVO">
-                                <rect key="frame" x="345" y="103" width="495" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="MRq-W1-onn"/>
-                                    <constraint firstAttribute="width" constant="495" id="av2-8Q-zqY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-rI-ygD">
-                                <rect key="frame" x="561" y="713" width="304" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="438" id="UFN-Lu-Bd0"/>
-                                </constraints>
-                                <state key="normal" title="料理する">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-rI-ygD">
+                                <rect key="frame" x="802" y="699" width="191" height="49"/>
+                                <state key="normal" image="ryouri.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -72,7 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="debugFoodButtonPressed:" destination="3" eventType="touchUpInside" id="CcC-6g-mz9"/>
+                                    <action selector="debug2:" destination="2" eventType="touchUpInside" id="PdL-UD-l9H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyZ-aa-oou">
@@ -86,24 +73,68 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選択されている食材" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tft-cb-g9o">
-                                <rect key="frame" x="561" y="700" width="340" height="21"/>
+                                <rect key="frame" x="523" y="173" width="340" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-Il-qqq">
+                                <rect key="frame" x="744" y="263" width="274" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4b-B9-VRd">
+                                <rect key="frame" x="167" y="292" width="691" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAO-0K-0ho">
+                                <rect key="frame" x="722" y="620" width="62" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="triangle_right.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressRightCookwareBtn:" destination="2" eventType="touchUpInside" id="lt2-JE-UOP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-3Z-RZ2">
+                                <rect key="frame" x="234" y="620" width="62" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="triangle_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressLeftCookwareBtn:" destination="2" eventType="touchUpInside" id="fYY-pW-HzK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-if-eRj">
+                                <rect key="frame" x="416" y="602" width="178" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="block_placeholder_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="aug-RV-gLC">
+                                <rect key="frame" x="227" y="163" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="block_placeholder_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="eST-4R-v5n">
+                                <rect key="frame" x="562" y="173" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVn-4U-jUs">
+                                <rect key="frame" x="10" y="263" width="274" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MwS-pz-hVO" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="345" id="FZw-8i-7QO"/>
-                            <constraint firstItem="MwS-pz-hVO" firstAttribute="top" secondItem="5" secondAttribute="top" constant="103" id="ioH-UW-UJs"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="9P1-o7-8wE"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="centerCookwareImage" destination="O4b-B9-VRd" id="8NL-lN-f1G"/>
                         <outlet property="debugLabel" destination="tft-cb-g9o" id="iLx-8N-k6D"/>
+                        <outlet property="fireAnimeView" destination="7dv-if-eRj" id="BTe-2t-XjY"/>
+                        <outlet property="leftCookwareImage" destination="qVn-4U-jUs" id="yqu-4e-cqx"/>
+                        <outlet property="rightCookwareImage" destination="pcn-Il-qqq" id="sLm-FE-reu"/>
                         <outlet property="startCookButton" destination="wt6-rI-ygD" id="6JY-IH-3Wf"/>
                     </connections>
                 </viewController>
@@ -123,59 +154,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lFY-jN-Ece">
-                                <rect key="frame" x="661" y="684" width="39" height="37"/>
-                            </pageControl>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7D7-9c-nwd">
-                                <rect key="frame" x="671" y="610" width="39" height="37"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SK3-oQ-zwM">
-                                <rect key="frame" x="406" y="696" width="195" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="195" id="3Gd-xE-dqr"/>
-                                    <constraint firstAttribute="height" constant="72" id="Bqz-zW-fMj"/>
-                                </constraints>
-                                <state key="normal" title="食べたい！">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="transitToRecipes:" destination="oVd-Ob-E43" eventType="touchDown" id="tiB-kL-YMn"/>
-                                </connections>
-                            </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tEP-yQ-HlZ">
-                                <rect key="frame" x="73" y="120" width="879" height="473"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T9a-GU-KF9">
+                                <rect key="frame" x="262" y="67" width="500" height="500"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRw-fB-Zaw">
-                                    <size key="itemSize" width="700" height="400"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MNb-VN-XEy">
+                                    <size key="itemSize" width="500" height="500"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vx-dc-y2B">
-                                <rect key="frame" x="94" y="620" width="813" height="76"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djj-cN-lfh">
+                                <rect key="frame" x="395" y="714" width="235" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="tabetai.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="transitToQuiz:" destination="kG2-b8-sum" eventType="touchUpInside" id="pCi-a0-dOG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNF-AL-waM">
+                                <rect key="frame" x="43" y="634" width="939" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="SK3-oQ-zwM" secondAttribute="bottom" constant="47" id="Fro-O7-8OK"/>
-                            <constraint firstItem="SK3-oQ-zwM" firstAttribute="bottom" secondItem="lFY-jN-Ece" secondAttribute="bottom" id="Xbk-1f-673"/>
-                            <constraint firstItem="SK3-oQ-zwM" firstAttribute="centerX" secondItem="RcO-P5-yZc" secondAttribute="centerX" id="m8n-UU-6Tn"/>
-                            <constraint firstAttribute="trailing" secondItem="lFY-jN-Ece" secondAttribute="trailing" constant="324" id="vYZ-Ht-47B"/>
-                            <constraint firstAttribute="bottom" secondItem="7D7-9c-nwd" secondAttribute="bottom" constant="121" id="yW7-ab-NPB"/>
-                            <constraint firstAttribute="trailing" secondItem="7D7-9c-nwd" secondAttribute="trailing" constant="314" id="zX7-Tw-Mqb"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="FdI-DX-8q9"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="foodCollectionView" destination="tEP-yQ-HlZ" id="wDQ-pm-Kmq"/>
-                        <outlet property="foodDescription" destination="6Vx-dc-y2B" id="7ZT-DL-N5V"/>
+                        <outlet property="foodCollectionView" destination="T9a-GU-KF9" id="diX-2f-HIp"/>
+                        <outlet property="foodDescription" destination="CNF-AL-waM" id="14b-ac-qcw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kG2-b8-sum" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,6 +231,12 @@
     </scenes>
     <resources>
         <image name="Default.png" width="320" height="480"/>
+        <image name="block_placeholder_left.png" width="527" height="527"/>
+        <image name="block_placeholder_right.png" width="539" height="540"/>
+        <image name="ryouri.png" width="225" height="80"/>
+        <image name="tabetai.png" width="235" height="54"/>
+        <image name="triangle_left.png" width="195" height="230"/>
+        <image name="triangle_right.png" width="195" height="230"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

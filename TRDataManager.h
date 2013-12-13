@@ -13,5 +13,10 @@
 @property NSArray *foodData;
 
 + (TRDataManager*)shareManager;
+@property int foodDataNum;
+
+@property UIImage *rightImage;
+@property UIImage *leftImage;
+
 
 @end

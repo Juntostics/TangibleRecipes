@@ -9,6 +9,7 @@
 #import "TRDataManager.h"
 #import "TRCustomCollectionViewCell.h"
 #import "TRRakutenRecipeViewController.h"
+#import "TRQuizViewController.h"
 
 @interface TRFoodPhotosViewController ()
 {
@@ -29,6 +30,12 @@ TRFood *foodInSelection;
     [self.navigationController pushViewController:rakutenRecipeViewController animated:YES];
 }
 
+- (IBAction)transitToQuiz:(id)sender
+{
+    TRQuizViewController *quiz = [[TRQuizViewController alloc]init];
+    [self.navigationController pushViewController:quiz animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,7 +53,7 @@ TRFood *foodInSelection;
 
 - (void)setBGImageToWindow
 {
-    UIImage *img_before = [UIImage imageNamed:@"foodMenuBG.png"];  // リサイズ前UIImage
+    UIImage *img_before = [UIImage imageNamed:@"background2@2x.png"];  // リサイズ前UIImage
     UIImage *img_after;  // リサイズ後UIImage
     
     UIGraphicsBeginImageContext(CGSizeMake(width, height));
@@ -79,11 +86,14 @@ TRFood *foodInSelection;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    LOG_METHOD;
     return [[TRDataManager shareManager].foodData count] ;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    LOG_METHOD;
+
     TRCustomCollectionViewCell *cell = [_foodCollectionView dequeueReusableCellWithReuseIdentifier:@"CellId" forIndexPath:indexPath];
     TRFood *foodAtIndex = (TRFood *)[[TRDataManager shareManager].foodData objectAtIndex:indexPath.row];
     [cell setFood:foodAtIndex];
@@ -96,6 +106,7 @@ TRFood *foodInSelection;
 {
     foodInSelection = [[TRDataManager shareManager].foodData objectAtIndex:indexPath.row];
     _foodDescription.text = foodInSelection.description;
+    DATAMANAGER.foodDataNum = indexPath.row;
 }
 
 

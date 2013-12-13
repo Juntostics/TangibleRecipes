@@ -9,6 +9,9 @@
 #import "TRDataManager.h"
 
 @implementation TRDataManager
+@synthesize foodDataNum = _foodDataNum;
+@synthesize rightImage = _rightImage;
+@synthesize leftImage = _leftImage;
 
 static TRDataManager *sharedInstance = nil;
 
